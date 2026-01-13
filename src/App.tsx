@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 
-// Navigation Items (matching template.html)
+
 const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'Listings', href: '#listings' },
@@ -9,7 +9,7 @@ const navItems = [
   { label: 'About Us', href: '#about' }
 ]
 
-// Gallery images (matching template.html carousel - 7 images)
+
 const galleryImages = [
   { src: '/images/property3.jpg', alt: '4460 Roseworthy' },
   { src: '/images/property4.jpg', alt: '5570 Ailanto' },
@@ -20,7 +20,7 @@ const galleryImages = [
   { src: '/images/property2.jpg', alt: '4787 E Beacon Ridge Interior' }
 ]
 
-// Partner logos
+
 const partnerLogos = [
   { src: '/images/big-circle.png', alt: 'The Ridge Realty Group' },
   { src: '/images/equal-housing.png', alt: 'Equal Housing Opportunity' },
@@ -28,7 +28,7 @@ const partnerLogos = [
   { src: '/images/chamber.jpg', alt: 'Chamber of Commerce' }
 ]
 
-// Services data (matching template Our Services section)
+
 const services = [
   {
     title: 'Real Estate Done Right',
