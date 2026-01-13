@@ -315,9 +315,57 @@ section {
   margin-bottom: 12px;
 }
 
-/* ============================================
-   MLS SEARCH SECTION
-   ============================================ */
+.stats-section {
+  background: var(--color-gold);
+  padding: 60px 0;
+}
+
+.stats-section .section-heading {
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+}
+
 .mls-search-section {
   position: relative;
   padding: 100px 0;
@@ -558,9 +606,69 @@ section {
   padding: 0 24px 24px;
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
+.testimonials-section {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.testimonials-section .section-heading {
+  color: var(--color-white);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: var(--color-dark);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 20px;
+  color: var(--color-gold);
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-gray);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.testimonial-author {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.author-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.author-location {
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 .contact-section {
   background: var(--color-dark);
 }

@@ -50,6 +50,27 @@ const services = [
   }
 ]
 
+const testimonials = [
+  {
+    name: 'Jennifer & Mark Thompson',
+    location: 'Pahrump, NV',
+    rating: 5,
+    text: 'Marci made our first home buying experience absolutely seamless. She was patient, knowledgeable, and always available to answer our questions. We found our dream home in just 3 weeks!'
+  },
+  {
+    name: 'Robert Williams',
+    location: 'Las Vegas, NV',
+    rating: 5,
+    text: 'Sold our property in record time and above asking price! Marci\'s marketing strategy and negotiation skills are unmatched. Highly recommend her to anyone looking to sell.'
+  },
+  {
+    name: 'Sarah & David Chen',
+    location: 'Pahrump, NV',
+    rating: 5,
+    text: 'We relocated from California and Marci helped us find the perfect property. Her knowledge of the Pahrump area is incredible. She went above and beyond every step of the way.'
+  }
+]
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -169,7 +190,30 @@ function App() {
           </div>
         </section>
 
-        {/* Section 3: Find Your Dream Home (MLS Search) */}
+        <section className="stats-section">
+          <div className="container">
+            <h2 className="section-heading">Why Choose Us</h2>
+            <div className="stats-grid">
+              <div className="stat-card">
+                <span className="stat-number">90</span>
+                <span className="stat-label">Clients Helped (2021)</span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-number">$28.5M</span>
+                <span className="stat-label">In Sales (2021)</span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-number">30</span>
+                <span className="stat-label">Years Experience</span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-number">#1</span>
+                <span className="stat-label">Top Residential Sales</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="listings" className="mls-search-section">
           <div className="mls-search-bg"></div>
           <div className="container">
@@ -314,7 +358,30 @@ function App() {
           </div>
         </section>
 
-        {/* Section 7: Call or Visit (Contact) */}
+        <section className="testimonials-section">
+          <div className="container">
+            <h2 className="section-heading">What Our Clients Say</h2>
+            <div className="testimonials-grid">
+              {testimonials.map((testimonial, i) => (
+                <div key={i} className="testimonial-card">
+                  <div className="stars">
+                    {[...Array(testimonial.rating)].map((_, j) => (
+                      <svg key={j} viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="testimonial-text">"{testimonial.text}"</p>
+                  <div className="testimonial-author">
+                    <p className="author-name">{testimonial.name}</p>
+                    <p className="author-location">{testimonial.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="about" className="contact-section">
           <div className="container">
             <h2 className="section-heading">Call or Visit</h2>
