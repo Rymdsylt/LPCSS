@@ -32,18 +32,21 @@ const partnerLogos = [
 const services = [
   {
     title: 'Real Estate Done Right',
-    subtitle: 'Commercial & Residential',
-    description: "Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!"
+    subtitle: '',
+    description: "Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!",
+    image: '/images/service1.jpg'
   },
   {
     title: 'Commercial & Residential',
     subtitle: '',
-    description: "Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community."
+    description: "Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put your hard-earned dollars.",
+    image: '/images/service2.jpg'
   },
   {
     title: 'Rely on Expertise',
     subtitle: '',
-    description: 'If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion.'
+    description: 'If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.',
+    image: '/images/service3.jpg'
   }
 ]
 
@@ -301,7 +304,7 @@ function App() {
             <div className="services-grid">
               {services.map((service, i) => (
                 <div key={i} className="service-card">
-                  <img src="https://img1.wsimg.com/isteam/stock/12792" alt={service.title} className="service-img" />
+                  <img src={service.image} alt={service.title} className="service-img" />
                   <h4>{service.title}</h4>
                   {service.subtitle && <h5>{service.subtitle}</h5>}
                   <p>{service.description}</p>
